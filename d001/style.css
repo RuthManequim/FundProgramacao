@@ -1,0 +1,31 @@
+body{
+    background-color:#736681;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.titulo{
+    color:#4c3663;
+    font-family: verdana;
+    font-size: 45px;
+}
+#meuBotao {
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#meuBotao:hover {
+    background-color:#4c3663;
+}
+.conteudo-centralizado {
+    text-align: center;
+}
