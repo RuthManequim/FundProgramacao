@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D008</title>
+  <style>
+    body {
+      background-color: rgb(225, 222, 222);
+      text-align: center;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+    }
+
+    .titulo {
+      color: rgb(76, 129, 189);
+      font-family: verdana;
+      font-size: 45px;
+    }
+
+    #meuBotao {
+      background-color: rgb(172, 166, 166);
+      color: black;
+      padding: 10px 20px;
+      font-size: 25px;
+    }
+
+    #meuBotao:hover {
+      background-color: rgb(134, 169, 209);
+    }
+
+    #output {
+      font-size: 20px;
+      font-family: verdana;
+      text-align: left;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="conteudo-centralizado">
+    <h1 class="titulo">Calcular Desconto</h1>
+    <button id="meuBotao" onclick="calcularDesconto()">Desconto de 10%</button>
+    <div id="output">
+      <h3>Clique no botão acima para iniciar.</h3>
+    </div>
+  </div>
+
+  <script>
+    function calcularDesconto() {
+      var produto = prompt("Qual é o produto que está sendo comprado?");
+      
+      if (produto) {
+        var precoOriginal = parseFloat(prompt("Qual é o preço do produto " + produto + "?"));
+        
+        if (!isNaN(precoOriginal)) {
+          var desconto = 0.1 * precoOriginal;
+          var precoComDesconto = precoOriginal - desconto;
+
+          var resultado = "Calculado desconto de 10% do produto:<br>" +
+                          "<strong>O preço original era R$" + precoOriginal.toFixed(2) + ".</strong><br>" +
+                          "Você acaba de ganhar <strong>R$" + desconto.toFixed(2) + "</strong> de desconto (-10%).<br>" +
+                          "No fim, você vai pagar <strong>R$" + precoComDesconto.toFixed(2) + "</strong> no produto.";
+
+          document.getElementById("output").innerHTML = resultado;
+        } else {
+          alert("Por favor, informe um valor válido para o preço do produto.");
+        }
+      } else {
+        alert("Por favor, informe o nome do produto.");
+      }
+    }
+  </script>
+
+</body>
+</html>
