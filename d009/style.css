@@ -1,0 +1,30 @@
+body{
+    background-color:rgb(225, 222, 222);
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.titulo{
+    color:rgb(76, 129, 189);
+    font-family: verdana;
+    font-size: 45px;
+}
+#meuBotao {
+    background-color:rgb(172, 166, 166);
+    color: black;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+#meuBotao:hover {
+    background-color:rgb(134, 169, 209);
+}
+#p {
+    font-size:20px;
+    font-family: verdana;
+}
+.conteudo-centralizado {
+    text-align: center;
+}
